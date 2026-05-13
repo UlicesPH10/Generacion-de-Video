@@ -7,7 +7,7 @@ import os
 
 app = FastAPI()
 
-client = genai.Client(api_key="AIzaSyAnR_jEv7YW5vDpVDU9qhULMf2nYaOepIY")
+client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # Endpoint 1: Recibe imagen y prompt, devuelve JSON con URL
 # Endpoint 1: Recibe imagen, prompt y duración
